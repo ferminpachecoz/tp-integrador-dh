@@ -1,0 +1,47 @@
+body{
+    background-image: url(../img/pared-ladrillo-pintado-blanco.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+.logo{
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.principio {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.barrabusqueda{
+    display: flex;
+    align-self: flex-start;
+}
+
+.busqueda {
+    border: none;
+    background: none;
+    width: 15px;
+}
+.busqueda img {
+    width: 19px;
+    display: flex;
+    justify-content: center;
+}
+.navegar{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding-right: 25px;
+}
