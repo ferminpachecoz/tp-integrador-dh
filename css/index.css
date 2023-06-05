@@ -56,3 +56,12 @@ a {
     color: black;
     padding-right: 25px;
 }
+
+
+.listas{
+    justify-content: space-around;
+}
+.footer{
+    justify-content: space-between;
+    padding-left: 0px;
+}
