@@ -5,10 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>artistas</title>
-    <link rel="stylesheet" href="./css/detalleartista.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/8c565191d9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <nav class="side-nav">
+        <div class="logo-nav">
+          <img src="./img/logo-removebg-preview.png" alt="logo sonorlab">
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-house"></i><a href="./index.html">Home</a></li>
+          <li><i class="fa-solid fa-sliders"></i><a href="./playlist.html">Mi playlist</a></li>
+          <li><i class="fa-solid fa-rectangle-list"></i><a href="./genres.html">Géneros</a></li>
+        </ul>
+      </nav>
+      <main>
+        <header>
+          <form action="./search-results.html" onsubmit="validateForm(event)" class="form">
+            <div class="input-container">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input class="busqueda" type="text" placeholder="¿Qué deseas escuchar?">
+            </div>
+          </form>
+        </header>
 
     <script src="./js/detalleartista.js"></script>
 </body>

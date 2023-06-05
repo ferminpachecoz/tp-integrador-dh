@@ -1,42 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="./css/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://kit.fontawesome.com/8c565191d9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="principio">
-        <img class="logo" src="./img/Screen Shot 2023-05-23 at 17.16.37.png" alt="logo">
-        <form class="barrabusqueda">
-            <input type="text" placeholder="Buscar">
-            <button class="busqueda" type="submit"><img src="img/magnifying-glass-solid.svg" alt="lupa"></button>
-        </form>
-        <nav class="navegar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="genres.html">GENEROS</a></li>
-                <li><a href="playlist.html">PLAYLIST</a></li>
-            </ul>
-        </nav>
-    </header>
-<br><br><br><br><br>
-    <ul class="listas">
-        <li>CANCIONES</li>
-        <li>ALBUMES</li>
-        <li>ARTISTA</li>
+  <nav class="side-nav">
+    <div class="logo-nav">
+      <img src="./img/logo-removebg-preview.png" alt="logo sonorlab">
+    </div>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a href="./index.html">Home</a></li>
+      <li><i class="fa-solid fa-sliders"></i><a href="./playlist.html">Mi playlist</a></li>
+      <li><i class="fa-solid fa-rectangle-list"></i><a href="./genres.html">Géneros</a></li>
     </ul>
-<br>
-    <footer>
-        <ul class="footer">
-            <li>Juan Tutaglio</li>
-            <li>Thiago Marcel</li>
-            <li>Fermin Pacheco</li>
+  </nav>
+  <main>
+    <header>
+      <form action="./search-results.html" onsubmit="validateForm(event)" class="form">
+        <div class="input-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="busqueda" type="text" placeholder="¿Qué deseas escuchar?">
+        </div>
+      </form>
+    </header>
+    <section>
+      <!-- Artistas Section -->
+      <div class="section-wrapper">
+        <h1>Artistas</h1>
+        <div class="container">
+          <div class="card">
+            <a href="./detalleartista.html">
+                <img src="./img/mock-image.jpg" alt="">
+                <p class="title">Led Zeppelin</p>
+            </a>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Led Zeppelin</p>
+          </div>
+        </div>
+      </div>
+      <!-- Albumes Section -->
+      <div class="section-wrapper">
+        <h1>Albumes</h1>
+        <div class="container">
+          <div class="card">
+            <a href="./detallealbum.html">
+                <img src="./img/mock-image.jpg" alt="">
+                <p class="title">Physical Graffiti</p>
+                <p class="subtitle">Led Zeppelin</p>
+            </a>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Physical Graffiti</p>
+            <p class="subtitle">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Physical Graffiti</p>
+            <p class="subtitle">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Physical Graffiti</p>
+            <p class="subtitle">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Physical Graffiti</p>
+            <p class="subtitle">Led Zeppelin</p>
+          </div>
+        </div>
+      </div>
+      <!-- Canciones Section -->
+      <div class="section-wrapper">
+        <h1>Canciones</h1>
+        <div class="container">
+          <div class="card">
+            <a href="./ detallecancion.html">
+                <img src="./img/mock-image.jpg" alt="">
+                <p class="title">Inmigrant Song</p>
+                <p class="subtitle">Led Zeppelin</p>
+            </a>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Inmigrant Song</p>
+            <p class="subtitle">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Inmigrant Song</p>
+            <p class="subtitle">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Inmigrant Song</p>
+            <p class="subtitle">Led Zeppelin</p>
+          </div>
+          <div class="card">
+            <img src="./img/mock-image.jpg" alt="">
+            <p class="title">Inmigrant Song</p>
+            <p class="subtitle">Led Zeppelin</p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <ul class="nombres">
+          <li>Juan Tutaglio</li>
+          <li>Fermin Pacheco</li>
+          <li>Thiago Marcel</li>
         </ul>
-    </footer>
+      </footer>
+    </section>
+  </main>
 
-    <script src="./js/index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
