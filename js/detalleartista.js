@@ -29,8 +29,8 @@ formulario.addEventListener("submit", function(event){
         
           html = `
           <img src="${data.picture}" alt="">
-          <p class="title">Nombre del cantante: ${data.name}</p>
-          <p class="title">Lista de canciones: ${data.tracklist}</p>
+          <p class="nombre cantante">Nombre del cantante: ${data.name}</p>
+          <p class="lista de canciones">Lista de canciones: ${data.tracklist}</p>
           `;
           artistasContainer.innerHTML += html
         

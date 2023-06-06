@@ -247,10 +247,11 @@ section .song-title{
   
 }
 
-.album-container .lista-de-canciones {
+.lista-de-canciones {
   font-style: italic;
   font-size: 16px; 
   margin-bottom: 10px;
   text-align: left;
   line-height: 1.5;
 }
+/*artista*/
