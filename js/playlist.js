@@ -1,14 +1,13 @@
 //header
-function validateForm(event) {
+let formulario = document.querySelector(".form")
+let busqueda = document.querySelector(".busqueda")
+formulario.addEventListener("submit", function(event){
     event.preventDefault();
-    let busqueda = document.querySelector(".busqueda").value.trim();
-
-    if (busqueda === "") {
+    if (busqueda.value === "") {
         alert("El campo no puede estar vacío.");
-      } else if (busqueda.length < 3) {
+      } else if (busqueda.value.length < 3) {
         alert("El término buscado debe tener al menos 3 caracteres.");
       } else {
-        document.querySelector(".form").submit();
+        this.submit()
       }
-    
-}
+})

@@ -1,24 +1,45 @@
 //header
-function validateForm(event) {
+let formulario = document.querySelector(".form")
+let busqueda = document.querySelector(".busqueda")
+formulario.addEventListener("submit", function(event){
     event.preventDefault();
-    let busqueda = document.querySelector(".busqueda").value.trim();
-
-    if (busqueda === "") {
+    if (busqueda.value === "") {
         alert("El campo no puede estar vacío.");
-      } else if (busqueda.length < 3) {
+      } else if (busqueda.value.length < 3) {
         alert("El término buscado debe tener al menos 3 caracteres.");
       } else {
-        document.querySelector(".form").submit();
+        this.submit()
       }
-    
-}
-let id = new URLSearchParams(window.location.search).get("id")
+})
 
-fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`)
-  .then(res => res.json())
-  .then(data =>{
+//detalles
+
+  let id = new URLSearchParams(window.location.search).get("id")
+  let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
+  fetch(url)
+.then(function(response) {
+    return response.json()
+
+  })
+  .then(function(data) {
     console.log(data);
-
-    let title = document.getElementById('title-detalle-cancion')
-    title.innerText=data.title
+    
+        let cancionesContainer = document.querySelector(".cancionesdata")
+        let html = ""
+      
+        
+          html = `
+          <img src="${data.album.cover}" alt="">
+          <p class="title">Nombre de la cancion: ${data.title}</p>
+          <p class="title">nombre del artista: ${data.artist.name}</p>
+          <p class="title">Nombre del disco al que pertenece la canción: ${data.album.title}</p>
+          <a href="./playlist.html">
+            ir a playlist
+          </a>
+          `;
+          cancionesContainer.innerHTML += html
+        
+      })
+  .catch(function(error) {
+    console.log("Error: " + error);
   })

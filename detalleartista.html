@@ -7,8 +7,7 @@
   <title>Boceto</title>
   <link rel="stylesheet" href="./css/styles.css">
   <script src="https://kit.fontawesome.com/8c565191d9.js" crossorigin="anonymous"></script>
-  <script src="./js/search-results.js"></script>
-  <script src="./js/detalleartista.js"></script>
+
 </head>
 <body>
     <nav class="side-nav">
@@ -20,22 +19,20 @@
           <li><i class="fa-solid fa-sliders"></i><a href="./playlist.html">Mi playlist</a></li>
           <li><i class="fa-solid fa-rectangle-list"></i><a href="./genres.html">Géneros</a></li>
         </ul>
-
       </nav>
       <main>
         <header>
-          <form action="/">
+          <form action="./search-results.html" class="form">
             <div class="input-container">
-              <a href="./search-results.html">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
-              <input type="text" placeholder="¿Qué te apetece escuchar?">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input class="busqueda" type="text" placeholder="¿Qué deseas escuchar?">
             </div>
           </form>
         </header>
-        <section id="section-home">
-          <h1 id="title-detalle-artista">Cargando...</h1>
-        </section>
-      </main>
+        <article class="artistasdata">
+
+        </article>
+        </main>
+      <script src="./js/detalleartista.js"></script>
 </body>
 </html>

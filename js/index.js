@@ -1,17 +1,17 @@
 //header
-function validateForm(event) {
+let formulario = document.querySelector(".form")
+let busqueda = document.querySelector(".busqueda")
+formulario.addEventListener("submit", function(event){
     event.preventDefault();
-    let busqueda = document.querySelector(".busqueda").value.trim();
-
-    if (busqueda === "") {
+    if (busqueda.value === "") {
         alert("El campo no puede estar vacío.");
-      } else if (busqueda.length < 3) {
+      } else if (busqueda.value.length < 3) {
         alert("El término buscado debe tener al menos 3 caracteres.");
       } else {
-        document.querySelector(".form").submit();
+        this.submit()
       }
-    
-}
+})
+
 
 //artistas
 let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart"
@@ -65,7 +65,7 @@ fetch(url)
           <div class="card">
           <img src="${albumes[i].cover}" alt="">
           <p class="title">${albumes[i].title}</p>
-          <p class="subtitle">${albumes[i].title}</p>
+          <p class="subtitle">${albumes[i].artist.name}</p>
           </div>
           </a>
         </article>
@@ -86,18 +86,18 @@ fetch(url)
     .then(function(data) {
       console.log(data);
       
-          let canciones = data.playlists.data;
+          let canciones = data.tracks.data;
           let cancionesContainer = document.querySelector(".Canciones")
           let htmlcanciones = ""
         
           for(let i=0; i<canciones.length; i++){
             htmlcanciones = `
           <article class="card">
-            <a href="./detallecancion.html?id=${canciones[i].id}">
+            <a href="./datelladecancion.html?id=${canciones[i].id}">
             <div class="card">
-            <img src="${canciones[i].title}" alt="">
-            <p class="title">${canciones[i].title}</p>
-            <p class="subtitle">${canciones[i].title}</p>
+            <img src="${canciones[i].album.cover}" alt="">
+            <p class="title">${canciones[i].title}</p>  
+            <p class="subtitle">${canciones[i].artist.name}</p>
             </div>
             </a>
           </article>
