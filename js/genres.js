@@ -29,9 +29,9 @@ fetch(url)
             html = `
             
             <article class="genero">
-            <a href="./detail-genres.html?id=${genre[i].id}">
+            <a class="a" href="./detail-genres.html?id=${genre[i].id}">
             <img src="${genre[i].picture}" alt="">
-            <p class="title uk-text-truncate">${genre[i].name}</p>
+            <p>${genre[i].name}</p>
             </a>
             </article>
             `;

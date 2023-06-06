@@ -74,6 +74,9 @@ header{
   align-items: center;
   padding: 0px 32px;
 }
+.h1{
+    color: #EDE7F6;
+}
 header form{
   width: 50%;
 }
@@ -279,6 +282,7 @@ section .song-title{
 section .genredata{
     display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 section .genero{
 
@@ -288,5 +292,8 @@ section .genero{
     margin-right: 25px;
     margin-bottom: 25px;
     width: 140px;
+}
+.genero p{
+    color: white;
 }
 
