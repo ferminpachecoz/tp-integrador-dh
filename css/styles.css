@@ -120,12 +120,22 @@ section .section-wrapper h1{
 section .section-wrapper .container{
   display: flex;
   overflow-x: scroll;
+  max-height: fit-content;
 }
 section .section-wrapper .container .card{
   background-color: #7F5AF0 ;
   padding: 10px;
   border-radius: 10px;
   margin-right: 32px;
+}
+.artista{
+  display: flex;
+}
+.album{
+  display: flex;
+}
+.Canciones{
+  display: flex;
 }
 section .section-wrapper .container .card img{
   width: 200px;
