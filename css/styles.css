@@ -127,6 +127,7 @@ section .section-wrapper .container .card{
   padding: 10px;
   border-radius: 10px;
   margin-right: 32px;
+  width: 200px;
 }
 .artista{
   display: flex;
@@ -138,19 +139,20 @@ section .section-wrapper .container .card{
   display: flex;
 }
 section .section-wrapper .container .card img{
-  width: 200px;
+  width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 section .section-wrapper .container .card .title{
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0px 0px 0px 0px;
   color: rgb(230, 230, 230);
 }
 section .section-wrapper .container .card .subtitle{
   font-weight: 600;
   font-size: 15px;
   color: rgb(190, 190, 190);
+  margin: 10px 0px 0px 0px;
 }
 /* footer */
 .nombres{

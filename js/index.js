@@ -22,17 +22,18 @@ fetch(url)
   })
   .then(function(data) {
     console.log(data);
-    
+        let spinner = document.getElementById("spinner-artista");
         let artistas = data.artists.data;
         let artistasContainer = document.querySelector(".artista")
         let html = ""
-      
+
+        spinner.style.display = "none"
         for(let i=0; i<artistas.length; i++){
           html = `
           <article class="card">
           <a href="./detalleartista.html?id=${artistas[i].id}">
           <img src="${artistas[i].picture}" alt="">
-          <p class="title">${artistas[i].name}</p>
+          <p class="title uk-text-truncate">${artistas[i].name}</p>
           </a>
           </article>
           `;
@@ -51,17 +52,18 @@ fetch(url)
   })
   .then(function(data) {
     console.log(data);
-    
+        let spinner = document.getElementById("spinner-album");
         let albumes = data.albums.data;
         let albumContainer = document.querySelector(".album")
         let htmlalbum = ""
-      
+
+        spinner.style.display = "none"
         for(let i=0; i<albumes.length; i++){
           htmlalbum = `
         <article class="card">
           <a href="./detallealbum.html?id=${albumes[i].id}">
           <img src="${albumes[i].cover}" alt="">
-          <p class="title">${albumes[i].title}</p>
+          <p class="title uk-text-truncate">${albumes[i].title}</p>
           <p class="subtitle">${albumes[i].artist.name}</p>
           </a>
         </article>
@@ -81,17 +83,18 @@ fetch(url)
     })
     .then(function(data) {
       console.log(data);
-      
+          let spinner = document.getElementById("spinner-cancion");
           let canciones = data.tracks.data;
           let cancionesContainer = document.querySelector(".Canciones")
           let htmlcanciones = ""
         
+          spinner.style.display = "none"
           for(let i=0; i<canciones.length; i++){
             htmlcanciones = `
           <article class="card">
             <a href="./detallecancion.html?id=${canciones[i].id}">
             <img src="${canciones[i].album.cover}" alt="">
-            <p class="title">${canciones[i].title}</p>  
+            <p class="title uk-text-truncate">${canciones[i].title}</p>  
             <p class="subtitle">${canciones[i].artist.name}</p>
             </a>
           </article>
@@ -102,18 +105,3 @@ fetch(url)
     .catch(function(error) {
       console.log("Error: " + error);
     })
-//modo oscuro
-function toggleDarkMode() {
-  let body = document.querySelector('body');
-  let button = document.getElementById('dark-mode-btn');
-
-  body.classList.toggle('modo-oscuro');
-  button.classList.toggle('modo-oscuro');
-
-  if (body.classList.contains('modo-oscuro')) {
-    button.textContent = 'Modo Claro';
-  } else {
-    button.textContent = 'Modo Oscuro';
-  }
-}
-
