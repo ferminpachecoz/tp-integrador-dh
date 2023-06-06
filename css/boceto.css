@@ -71,11 +71,14 @@ header form{
 header form .input-container{
   position: relative;
 }
-header form .input-container i{
+header form .input-container a{
   position: absolute;
   left: 15px;
   top: 13px;
+}
+header form .input-container a i{
   font-size: 20px;
+  color: var(--font-white-1);
 }
 header form .input-container input{
   font-size: 0.9em;
@@ -116,10 +119,11 @@ section .section-wrapper .container{
 }
 section .section-wrapper .container .card{
   background-color: #7F5AF0 ;
-  padding: 10px;
   border-radius: 10px;
   margin-right: 2em;
+  padding: 10px;
 }
+
 section .section-wrapper .container .card img{
   width: 200px;
   border-radius: 10px;
@@ -130,9 +134,11 @@ section .section-wrapper .container .card .title{
   margin-bottom: 10px;
   color: rgb(230, 230, 230);
   overflow-wrap: break-word;
+  display: block;
 }
 section .section-wrapper .container .card .subtitle{
   font-weight: 600;
   font-size: 0.9em;
   color: rgb(190, 190, 190);
+  display: block;
 }

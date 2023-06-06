@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>artistas</title>
-    <link rel="stylesheet" href="./css/detalleartista.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boceto</title>
+  <link rel="stylesheet" href="./css/boceto.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="https://kit.fontawesome.com/8c565191d9.js" crossorigin="anonymous"></script>
+  <script src="./js/search-results.js"></script>
+  <script src="./js/detalleartista.js"></script>
 </head>
 <body>
-    
-
-    <script src="./js/detalleartista.js"></script>
+  <nav class="side-nav">
+    <div class="logo-nav">
+      <img src="./img/logo-removebg-preview.png" alt="logo sonorlab">
+    </div>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a href="./boceto.html">Inicio</a></li>
+      <li><i class="fa-solid fa-sliders"></i><a href="#">Mi playlist</a></li>
+    </ul>
+    <ul>
+      <li><i class="fa-solid fa-radio"></i><a href="#">Artistas</a></li>
+      <li><i class="fa-solid fa-record-vinyl"></i><a href="#">Álbumes</a></li>
+      <li><i class="fa-solid fa-file-audio"></i><a href="#">Canciones</a></li>
+      <li><i class="fa-solid fa-rectangle-list"></i><a href="#">Géneros</a></li>
+    </ul>
+  </nav>
+  <main>
+    <header>
+      <form action="/">
+        <div class="input-container">
+          <a href="./search-results.html">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <input type="text" placeholder="¿Qué te apetece escuchar?">
+        </div>
+      </form>
+    </header>
+    <section id="section-home">
+      <h1 id="title-detalle-artista">Cargando...</h1>
+    </section>
+  </main>
 </body>
 </html>

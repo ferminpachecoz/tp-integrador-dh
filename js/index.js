@@ -22,10 +22,12 @@ function insertarDatosHome (chart){
 
   for(let i=0; i<artistas.length; i++){
     let html = `
+    <a href="./detalleartista.html?id=${artistas[i].id}">
     <div class="card">
     <img src="${artistas[i].picture}" alt="">
     <p class="title">${artistas[i].name}</p>
     </div>
+    </a>
     `;
     artistasContainer.innerHTML += html
   }
@@ -33,20 +35,19 @@ function insertarDatosHome (chart){
     if(albumes[i].id !== 448581475){
       let html = `
       <div class="card">
-      <img src="${albumes[i].cover}" alt="">
-      <p class="title">${albumes[i].title}</p>
-      <p class="subtitle">${albumes[i].artist.name}</p>
-      </div>
-      `;
+        <img src="${albumes[i].cover}" alt="">
+        <a class="title" href="./detallealbum.html?id=${albumes[i].id}">${albumes[i].title}</a>
+        <a class="subtitle" href="./detalleartista.html?id=${albumes[i].artist.id}">${albumes[i].artist.name}</a>
+      </div>`;
       albumesContainer.innerHTML += html
     }
   }
   for(let i=0; i<canciones.length; i++){
     let html = `
     <div class="card">
-    <img src="${canciones[i].album.cover}" alt="">
-    <p class="title">${canciones[i].title_short}</p>
-    <p class="subtitle">${canciones[i].artist.name}</p>
+      <img src="${canciones[i].album.cover}" alt="">
+      <a class="title" href="./detallecancion.html?id=${canciones[i].id}">${canciones[i].title_short}</a>
+      <a class="subtitle" href="./detalleartista.html?id=${canciones[i].artist.id}">${canciones[i].artist.name}</a>
     </div>
     `;
     cancionesContainer.innerHTML += html
