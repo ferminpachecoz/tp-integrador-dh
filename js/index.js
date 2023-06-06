@@ -102,3 +102,18 @@ fetch(url)
     .catch(function(error) {
       console.log("Error: " + error);
     })
+//modo oscuro
+function toggleDarkMode() {
+  let body = document.querySelector('body');
+  let button = document.getElementById('dark-mode-btn');
+
+  body.classList.toggle('modo-oscuro');
+  button.classList.toggle('modo-oscuro');
+
+  if (body.classList.contains('modo-oscuro')) {
+    button.textContent = 'Modo Claro';
+  } else {
+    button.textContent = 'Modo Oscuro';
+  }
+}
+
