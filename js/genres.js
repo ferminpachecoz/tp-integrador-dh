@@ -13,7 +13,7 @@ formulario.addEventListener("submit", function(event){
       }
 })
 
-let url = "https://api.deezer.com/genre"
+let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre"
 fetch(url)
 .then(function(response) {
     return response.json()
@@ -21,6 +21,22 @@ fetch(url)
   })
   .then(function(data) {
     console.log(data);
+        let genresContainer = document.querySelector(".genredata")
+        let html = ""
+        let genre = data.data
+    
+        for(let i=1; i<genre.length; i++){
+            html = `
+            
+            <article class="genero">
+            <a href="./detail-genres.html?id=${genre[i].id}">
+            <img src="${genre[i].picture}" alt="">
+            <p class="title uk-text-truncate">${genre[i].name}</p>
+            </a>
+            </article>
+            `;
+            genresContainer.innerHTML += html
+          }
 
   })
   .catch(function(error) {

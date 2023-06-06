@@ -275,3 +275,18 @@ section .song-title{
   font-weight: bold;
 }
 
+/*genres*/
+section .genredata{
+    display: flex;
+  flex-wrap: wrap;
+}
+section .genero{
+
+    background-color: #7F5AF0 ;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    width: 140px;
+}
+
