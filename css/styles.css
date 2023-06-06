@@ -19,7 +19,7 @@ a {
 body{
   display: flex;
   font-family: 'Montserrat', sans-serif;
-  color: rgb(255, 255, 255);
+  color: #EDE7F6;
 }
 /* Side Nav Styles */
 .side-nav{
@@ -116,6 +116,11 @@ section .section-wrapper{
 }
 section .section-wrapper h1{
   margin-bottom: 16px;
+  color: #EDE7F6;
+  font-size: 2em;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 1em;
 }
 section .section-wrapper .container{
   display: flex;
