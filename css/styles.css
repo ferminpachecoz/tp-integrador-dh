@@ -32,9 +32,10 @@ body{
 .side-nav .logo-nav{
   display: flex;
   justify-content: center;
+ 
 }
 .side-nav .logo-nav img{
-  width: 100px;
+  width: 200px;
 }
 .side-nav ul{
   display: flex;
