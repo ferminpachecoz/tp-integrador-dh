@@ -48,14 +48,13 @@ formulario.addEventListener("submit", function(event){
         
           html = `
           <img src="${data.cover}" alt="">
-          <p class="title">Nombre del disco: ${data.title}</p>
-          <p class="title">Nombre del artista: ${data.artist.name}</p>
-          <p class="title">Nombre del género al que pertenece: ${genresarray}</p>
-          <p class="title">Fecha de publicación del disco: ${data.release_date}</p>
-          <p class="title">Lista de canciones: ${tracksarray}</p>
+          <p class="disco">Nombre del Disco: ${data.title}</p>
+          <p class="artista">Nombre del Artista: ${data.artist.name}</p>
+          <p class="genero">Nombre del Género al que pertenece: ${genresarray}</p>
+          <p class="fecha publicacion">Fecha de publicación del disco: ${data.release_date}</p>
+          <ul class="lista-de-canciones">${tracksarray}</ul>
           `;
-          albumContainer.innerHTML += html
-        
+          albumContainer.innerHTML += '<div class="album-container">' + html + '</div>';
       })
   .catch(function(error) {
     console.log("Error: " + error);

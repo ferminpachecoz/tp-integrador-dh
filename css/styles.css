@@ -158,3 +158,44 @@ section .section-wrapper .container .card .subtitle{
   justify-content: space-around;
   list-style: none;
 }
+/*album*/
+.album-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  padding: 20px;
+  background-color: #3f3e3e;
+}
+
+.album-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.album-container .disco {
+  font-size: 50px; 
+  margin-bottom: 10px;
+  background-color: #3f3e3e;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.album-container .artista {
+  font-size: 16px; 
+  margin-bottom: 5px;
+  font-weight: bold;
+  
+}
+
+.album-container .lista-de-canciones {
+  font-style: italic;
+  font-size: 16px; 
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.5;
+}
+
