@@ -23,20 +23,21 @@ fetch(url)
   })
   .then(function(data) {
     console.log(data);
+    let segundos = document.getElementById('segundos');
+    let artista = document.getElementById('artista');
+    let titulo = document.getElementById('titulo');
+    let fecha = document.getElementById('fecha');
+    let explicito = document.getElementById('explicito');
+    let imagen = document.getElementById('imagen-album');
+    let mainTitle = document.querySelector('.song-title')
     
-    /* let cancionesContainer = document.querySelector(".cancionesdata")
-    let html = ""
-    html = `
-    <img src="${data.album.cover}" alt="">
-    <p class="title">Nombre de la cancion: ${data.title}</p>
-    <p class="title">nombre del artista: ${data.artist.name}</p>
-    <p class="title">Nombre del disco al que pertenece la canción: ${data.album.title}</p>
-    <a href="./playlist.html">
-      ir a playlist
-    </a>
-    `;
-    cancionesContainer.innerHTML += html */
-        
+    segundos.innerText = data.duration + " segundos";
+    artista.innerText = data.artist.name;
+    titulo.innerText = data.title;
+    fecha.innerText = data.release_date;
+    explicito.innerText = data.explicit_lyrics?"Si":"No";
+    imagen.src = data.album.cover_xl;
+    mainTitle.innerText = data.title;
   })
   .catch(function(error) {
     console.log("Error: " + error);

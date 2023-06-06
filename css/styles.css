@@ -188,7 +188,10 @@ section .song-title{
   color: #7F5AF0;
   font-size: 1.1em;
 }
-.canciones-data .content-wrapper button{
+.canciones-data .content-wrapper .button-container{
+  display: flex;
+}
+.canciones-data .content-wrapper .button-container button{
   background-color: transparent;
   font-size: 1.1em;
   color: #EDE7F6;
@@ -198,8 +201,9 @@ section .song-title{
   cursor: pointer;
   font-weight: 600;
   transition: 0.4s;
+  margin-right: 20px;
 }
-.canciones-data .content-wrapper button:hover{
+.canciones-data .content-wrapper .button-container button:hover{
   background-color: #EDE7F6;
   color: black;
 }
