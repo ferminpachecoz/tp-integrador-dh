@@ -242,7 +242,7 @@ section .song-title{
   
 }
 
-.lista-de-canciones {
+.album-container .lista-de-canciones {
   font-style: italic;
   font-size: 16px; 
   margin-bottom: 10px;
@@ -272,3 +272,4 @@ section .song-title{
   padding: 10px;
   font-weight: bold;
 }
+
