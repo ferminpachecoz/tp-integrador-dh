@@ -29,11 +29,11 @@ formulario.addEventListener("submit", function(event){
         
           html = `
           <img src="${data.picture}" alt="">
-          <p class="nombre cantante">Nombre del cantante: ${data.name}</p>
+          <p class="nombre-cantante">Nombre del cantante: ${data.name}</p>
           <p class="lista de canciones">Lista de canciones: ${data.tracklist}</p>
           `;
-          artistasContainer.innerHTML += html
-        
+          artistasContainer.innerHTML += '<div class="artista-container">' + html + '</div>';
+
       })
   .catch(function(error) {
     console.log("Error: " + error);
