@@ -158,3 +158,48 @@ section .section-wrapper .container .card .subtitle{
   justify-content: space-around;
   list-style: none;
 }
+/* Detalle Cancion Styles */
+section .song-title{
+  margin-bottom: 1em;
+}
+.canciones-data{
+  display: flex;
+}
+.canciones-data .album-cover{
+  width: 35%;
+}
+.canciones-data .album-cover img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.canciones-data .content-wrapper{
+  width: 50%;
+  padding: 1em;
+}
+.canciones-data .content-wrapper .wrapper{
+  display: flex;
+  align-items: end;
+  margin-bottom: 2em;
+}
+.canciones-data .content-wrapper .wrapper .title{
+  font-weight: 600;
+  margin-right: 15px;
+  color: #7F5AF0;
+  font-size: 1.1em;
+}
+.canciones-data .content-wrapper button{
+  background-color: transparent;
+  font-size: 1.1em;
+  color: #EDE7F6;
+  border: 2px solid #EDE7F6;
+  border-radius: 1000px;
+  padding: 0.6em 2em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.4s;
+}
+.canciones-data .content-wrapper button:hover{
+  background-color: #EDE7F6;
+  color: black;
+}

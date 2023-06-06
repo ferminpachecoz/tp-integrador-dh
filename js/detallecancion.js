@@ -14,32 +14,30 @@ formulario.addEventListener("submit", function(event){
 
 //detalles
 
-  let id = new URLSearchParams(window.location.search).get("id")
-  let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
-  fetch(url)
-.then(function(response) {
+let id = new URLSearchParams(window.location.search).get("id")
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
+fetch(url)
+  .then(function(response) {
     return response.json()
 
   })
   .then(function(data) {
     console.log(data);
     
-        let cancionesContainer = document.querySelector(".cancionesdata")
-        let html = ""
-      
+    /* let cancionesContainer = document.querySelector(".cancionesdata")
+    let html = ""
+    html = `
+    <img src="${data.album.cover}" alt="">
+    <p class="title">Nombre de la cancion: ${data.title}</p>
+    <p class="title">nombre del artista: ${data.artist.name}</p>
+    <p class="title">Nombre del disco al que pertenece la canción: ${data.album.title}</p>
+    <a href="./playlist.html">
+      ir a playlist
+    </a>
+    `;
+    cancionesContainer.innerHTML += html */
         
-          html = `
-          <img src="${data.album.cover}" alt="">
-          <p class="title">Nombre de la cancion: ${data.title}</p>
-          <p class="title">nombre del artista: ${data.artist.name}</p>
-          <p class="title">Nombre del disco al que pertenece la canción: ${data.album.title}</p>
-          <a href="./playlist.html">
-            ir a playlist
-          </a>
-          `;
-          cancionesContainer.innerHTML += html
-        
-      })
+  })
   .catch(function(error) {
     console.log("Error: " + error);
   })

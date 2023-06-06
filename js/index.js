@@ -89,7 +89,7 @@ fetch(url)
           for(let i=0; i<canciones.length; i++){
             htmlcanciones = `
           <article class="card">
-            <a href="./datelladecancion.html?id=${canciones[i].id}">
+            <a href="./detallecancion.html?id=${canciones[i].id}">
             <img src="${canciones[i].album.cover}" alt="">
             <p class="title">${canciones[i].title}</p>  
             <p class="subtitle">${canciones[i].artist.name}</p>
