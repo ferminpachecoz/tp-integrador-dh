@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detallescancion</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/8c565191d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+      <nav class="side-nav">
+        <div class="logo-nav">
+          <img src="./img/logo-removebg-preview.png" alt="logo sonorlab">
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-house"></i><a href="./index.html">Home</a></li>
+          <li><i class="fa-solid fa-sliders"></i><a href="./playlist.html">Mi playlist</a></li>
+          <li><i class="fa-solid fa-rectangle-list"></i><a href="./genres.html">Géneros</a></li>
+        </ul>
+      </nav>
+      <main>
+        <header>
+          <form action="./search-results.html" class="form">
+            <div class="input-container">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input class="busqueda" type="text" placeholder="¿Qué deseas escuchar?">
+            </div>
+          </form>
+        </header>
+        <section>
+          <h1 class="song-title">Cargando...</h1>
+          <article class="canciones-data">
+            <div class="album-cover">
+              <img src="" id="imagen-album" alt="">
+            </div>
+            <div class="content-wrapper">
+              <span class="wrapper">
+                <p class="title">Duración</p><p class="value" id="segundos"></p>
+              </span>
+              <span class="wrapper">
+                <p class="title">Artista</p><p class="value" id="artista"></p>
+              </span>
+              <span class="wrapper">
+                <p class="title">Album</p><p class="value" id="titulo"></p>
+              </span>
+              <span class="wrapper">
+                <p class="title">Fecha de Lanzamiento</p><p class="value" id="fecha"></p>
+              </span>
+              <span class="wrapper">
+                <p class="title">Letras explicitas</p><p class="value" id="explicito"></p>
+              </span>
+              <div class="button-container">
+                <button class="agregar-cancion">Agregar</button>
+                <button class="agregar cancion">Reproducir</button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <script src="./js/detallecancion.js"></script>
+</body>
+</html>
