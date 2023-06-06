@@ -1,4 +1,5 @@
 //header
+// Buscador 
 let formulario = document.querySelector(".form")
 let busqueda = document.querySelector(".busqueda")
 formulario.addEventListener("submit", function(event){

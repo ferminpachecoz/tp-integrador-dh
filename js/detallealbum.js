@@ -1,4 +1,5 @@
 //header
+// Buscador 
 let formulario = document.querySelector(".form")
 let busqueda = document.querySelector(".busqueda")
 formulario.addEventListener("submit", function(event){
@@ -13,6 +14,7 @@ formulario.addEventListener("submit", function(event){
 })
 
 //detalles
+// informacion API (album)
   let id = new URLSearchParams(window.location.search).get("id")
   let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}`
   fetch(url)

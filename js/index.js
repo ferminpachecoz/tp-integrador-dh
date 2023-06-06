@@ -1,4 +1,5 @@
 //header
+// Buscador 
 let formulario = document.querySelector(".form")
 let busqueda = document.querySelector(".busqueda")
 formulario.addEventListener("submit", function(event){
@@ -14,6 +15,7 @@ formulario.addEventListener("submit", function(event){
 
 
 //artistas
+//informacion APi
 let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart"
 fetch(url)
 .then(function(response) {
@@ -22,7 +24,7 @@ fetch(url)
   })
   .then(function(data) {
     console.log(data);
-        let spinner = document.getElementById("spinner-artista");
+        let spinner = document.getElementById("spinner-artista"); //Spiner de Carga
         let artistas = data.artists.data;
         let artistasContainer = document.querySelector(".artista")
         let html = ""
@@ -45,6 +47,7 @@ fetch(url)
   })
 
   //albumes
+  // Informacion API
   fetch(url)
 .then(function(response) {
     return response.json()
@@ -52,7 +55,7 @@ fetch(url)
   })
   .then(function(data) {
     console.log(data);
-        let spinner = document.getElementById("spinner-album");
+        let spinner = document.getElementById("spinner-album"); //Spiner de Carga
         let albumes = data.albums.data;
         let albumContainer = document.querySelector(".album")
         let htmlalbum = ""
@@ -76,6 +79,7 @@ fetch(url)
   })
 
   //canciones
+  // Informacion API 
   fetch(url)
   .then(function(response) {
       return response.json()
@@ -83,7 +87,7 @@ fetch(url)
     })
     .then(function(data) {
       console.log(data);
-          let spinner = document.getElementById("spinner-cancion");
+          let spinner = document.getElementById("spinner-cancion"); //Spiner de Carga
           let canciones = data.tracks.data;
           let cancionesContainer = document.querySelector(".Canciones")
           let htmlcanciones = ""

@@ -7,6 +7,7 @@
 a {
   text-decoration: none;
 }
+/*scrollbar para las canciones albums y artista*/
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 5px;
