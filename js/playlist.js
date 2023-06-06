@@ -8,7 +8,6 @@ function validateForm(event) {
       } else if (busqueda.length < 3) {
         alert("El término buscado debe tener al menos 3 caracteres.");
       } else {
-        // Si pasa las validaciones, puedes enviar el formulario o realizar otra acción
         document.querySelector(".form").submit();
       }
     
