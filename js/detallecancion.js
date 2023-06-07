@@ -14,7 +14,6 @@ formulario.addEventListener("submit", function(event){
 })
 
 //detalles
-
 let id = new URLSearchParams(window.location.search).get("id")
 let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
 fetch(url)
@@ -31,6 +30,8 @@ fetch(url)
     let explicito = document.getElementById('explicito');
     let imagen = document.getElementById('imagen-album');
     let mainTitle = document.querySelector('.song-title')
+
+    let buttonAgregar = document.getElementById('btn-agregar')
     
     segundos.innerText = data.duration + " segundos";
     artista.innerText = data.artist.name;
@@ -39,6 +40,10 @@ fetch(url)
     explicito.innerText = data.explicit_lyrics?"Si":"No";
     imagen.src = data.album.cover_xl;
     mainTitle.innerText = data.title;
+    buttonAgregar.idCancion = data.id;
+    buttonAgregar.title = data.title;
+    buttonAgregar.artist = data.artist.name;
+    buttonAgregar.cover = data.album.cover_xl
   })
   .catch(function(error) {
     console.log("Error: " + error);

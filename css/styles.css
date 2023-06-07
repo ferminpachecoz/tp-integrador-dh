@@ -242,7 +242,7 @@ section .song-title{
   font-size: 35px; 
   margin-bottom: 20px;
   background-color: #3f3e3e;
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
   font-weight: bold;
 }
 
@@ -303,4 +303,17 @@ section .genero{
 .genero p{
     color: white;
 }
-
+/* Mi Playlist Styles */
+section .mi-playlist .container .card{
+  width: 200px;
+  margin-bottom: 30px;
+}
+section .mi-playlist .container .card .btn-borrar{
+  margin-top: 10px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: red;
+  border: none;
+  color: #EDE7F6;
+  cursor: pointer;
+}
