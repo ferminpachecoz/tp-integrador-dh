@@ -56,7 +56,7 @@ formulario.addEventListener("submit", function(event){
         
         <p class="artista">Fecha de publicación del disco: ${data.release_date}</p>
         
-        <ol class="listac">Lista de canciones:  ${tracksarray}</ol>
+        <ol class="lista">Lista de canciones:  ${tracksarray}</ol>
       `;
       
       albumContainer.innerHTML += '<div class="album-container">' + html + '</div>';

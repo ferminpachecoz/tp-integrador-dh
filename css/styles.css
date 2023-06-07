@@ -234,8 +234,8 @@ section .song-title{
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border-radius: 50%;
   margin-bottom: 20px;
+  border-radius: 50%;
 }
 
 .album-container .disco {
@@ -247,19 +247,21 @@ section .song-title{
 }
 
 .album-container .artista {
-  font-size: 16px; 
+  font-size: 20px; 
   margin-bottom: 20px;
   font-weight: bold;
+  margin-bottom: 20px;
   
 }
-.listac{
-    padding-left: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
+
 .list{
-    background-color: rgba(30, 30, 30, 0.963);
+    background-color: #302f2f;
     margin-bottom: 10px;
+    list-style-type: none;
+    border: 0.5px solid #3f3e3e;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 /*artista*/
 .artista-container {
