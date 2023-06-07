@@ -7,6 +7,7 @@
 a {
   text-decoration: none;
 }
+/*scrollbar para las canciones albums y artista*/
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 5px;
@@ -31,9 +32,10 @@ body{
 .side-nav .logo-nav{
   display: flex;
   justify-content: center;
+ 
 }
 .side-nav .logo-nav img{
-  width: 100px;
+  width: 200px;
 }
 .side-nav ul{
   display: flex;
@@ -71,6 +73,9 @@ header{
   display: flex;
   align-items: center;
   padding: 0px 32px;
+}
+.h1{
+    color: #EDE7F6;
 }
 header form{
   width: 50%;
@@ -128,7 +133,7 @@ section .section-wrapper .container{
   max-height: fit-content;
 }
 section .section-wrapper .container .card{
-  background-color: #7F5AF0 ;
+  background-color: #302f2f ;
   padding: 10px;
   border-radius: 10px;
   margin-right: 32px;
@@ -164,6 +169,7 @@ section .section-wrapper .container .card .subtitle{
   display: flex;
   justify-content: space-around;
   list-style: none;
+
 }
 /* Detalle Cancion Styles */
 section .song-title{
@@ -233,8 +239,8 @@ section .song-title{
 }
 
 .album-container .disco {
-  font-size: 50px; 
-  margin-bottom: 10px;
+  font-size: 35px; 
+  margin-bottom: 20px;
   background-color: #3f3e3e;
   padding: 10px;
   font-weight: bold;
@@ -242,16 +248,59 @@ section .song-title{
 
 .album-container .artista {
   font-size: 16px; 
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   font-weight: bold;
   
 }
-
-.lista-de-canciones {
-  font-style: italic;
-  font-size: 16px; 
-  margin-bottom: 10px;
-  text-align: left;
-  line-height: 1.5;
+.listac{
+    padding-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.list{
+    background-color: rgba(30, 30, 30, 0.963);
+    margin-bottom: 10px;
 }
 /*artista*/
+.artista-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  padding: 20px;
+  background-color: #3f3e3e;
+}
+.artista-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.artista-container .nombre-cantante {
+  font-size: 50px; 
+  margin-bottom: 10px;
+  background-color: #3f3e3e;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/*genres*/
+section .genredata{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section .genero{
+
+    background-color: #302f2f ;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    width: 140px;
+}
+.genero p{
+    color: white;
+}
+
