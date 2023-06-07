@@ -42,19 +42,21 @@ formulario.addEventListener("submit", function(event){
         let tracksarray = "";
     
         for (let i = 0; i < tracks.length; i++) {
-          tracksarray += tracks[i].title;
-          if (i < tracks.length - 1) {
-            tracksarray += ", ";
-          }
+            tracksarray += `<li class="list"> ${tracks[i].title}</li>`
+
         }
         
         html = `
         <img src="${data.cover}" alt="">
         <p class="disco">Nombre del Disco: ${data.title}</p>
+        
         <p class="artista">Nombre del Artista: ${data.artist.name}</p>
-        <p class="genero">Nombre del Género al que pertenece: ${genresarray}</p>
-        <p class="fecha publicacion">Fecha de publicación del disco: ${data.release_date}</p>
-        <ul class="lista-de-canciones">Lista de Canciones:<li>${tracksarray}</li></ul>
+        
+        <p class="artista">Nombre del Género al que pertenece: ${genresarray}</p>
+        
+        <p class="artista">Fecha de publicación del disco: ${data.release_date}</p>
+        
+        <ol class="listac">Lista de canciones:  ${tracksarray}</ol>
       `;
       
       albumContainer.innerHTML += '<div class="album-container">' + html + '</div>';

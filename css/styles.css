@@ -235,7 +235,7 @@ section .song-title{
 
 .album-container .disco {
   font-size: 35px; 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background-color: #3f3e3e;
   padding: 10px;
   font-weight: bold;
@@ -243,17 +243,18 @@ section .song-title{
 
 .album-container .artista {
   font-size: 16px; 
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   font-weight: bold;
   
 }
-
-.album-container .lista-de-canciones {
-  font-style: italic;
-  font-size: 16px; 
-  margin-bottom: 10px;
-  text-align: left;
-  line-height: 1.5;
+.listac{
+    padding-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.list{
+    background-color: rgba(30, 30, 30, 0.963);
+    margin-bottom: 10px;
 }
 /*artista*/
 .artista-container {
