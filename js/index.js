@@ -1,19 +1,3 @@
-//header
-// Buscador 
-let formulario = document.querySelector(".form")
-let busqueda = document.querySelector(".busqueda")
-formulario.addEventListener("submit", function(event){
-    event.preventDefault();
-    if (busqueda.value === "") {
-        alert("El campo no puede estar vacío.");
-      } else if (busqueda.value.length < 3) {
-        alert("El término buscado debe tener al menos 3 caracteres.");
-      } else {
-        this.submit()
-      }
-})
-
-
 //artistas
 //informacion APi
 let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart"
@@ -23,7 +7,6 @@ fetch(url)
 
   })
   .then(function(data) {
-    console.log(data);
         let spinner = document.getElementById("spinner-artista"); //Spiner de Carga
         let artistas = data.artists.data;
         let artistasContainer = document.querySelector(".artista")
@@ -54,7 +37,6 @@ fetch(url)
 
   })
   .then(function(data) {
-    console.log(data);
         let spinner = document.getElementById("spinner-album"); //Spiner de Carga
         let albumes = data.albums.data;
         let albumContainer = document.querySelector(".album")
@@ -86,7 +68,6 @@ fetch(url)
   
     })
     .then(function(data) {
-      console.log(data);
           let spinner = document.getElementById("spinner-cancion"); //Spiner de Carga
           let canciones = data.tracks.data;
           let cancionesContainer = document.querySelector(".Canciones")

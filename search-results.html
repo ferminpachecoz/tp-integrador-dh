@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="./css/styles.css">
   <script src="https://kit.fontawesome.com/8c565191d9.js" crossorigin="anonymous"></script>
 
+ <!-- UIkit CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/css/uikit.min.css" />
+
+ <!-- UIkit JS -->
+ <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/js/uikit.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/js/uikit-icons.min.js"></script>
+
 </head>
 <body>
   <nav class="side-nav">
@@ -29,8 +36,19 @@
             </div>
           </form>
     </header>
-    <section class="h1">
-      <h1>Resultados de búsqueda</h1>
+    <section class="search-resultados">
+      <h1 class="h1">Cargando...</h1>
+      <ul>
+        <li><button id="btn-todo">Todo</button></li>
+        <li><button id="btn-cancion">Canciones</button></li>
+        <li><button id="btn-artista">Artistas</button></li>
+        <li><button id="btn-album">Álbumes</button></li>
+      </ul>
+      <div class="section-wrapper">
+        <div class="container">
+          <div uk-spinner="ratio: 3"></div>
+        </div>
+      </div>
     </section>
   </main>
 

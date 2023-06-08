@@ -1,17 +1,4 @@
-//header
-// Buscador 
-let formulario = document.querySelector(".form")
-let busqueda = document.querySelector(".busqueda")
-formulario.addEventListener("submit", function(event){
-    event.preventDefault();
-    if (busqueda.value === "") {
-        alert("El campo no puede estar vacío.");
-      } else if (busqueda.value.length < 3) {
-        alert("El término buscado debe tener al menos 3 caracteres.");
-      } else {
-        this.submit()
-      }
-})
+
 console.log(localStorage.getItem("cancion"));
 if(localStorage.getItem("cancion")){
   let storage = JSON.parse(localStorage.getItem("cancion"))
@@ -44,6 +31,7 @@ for (let i = 0; i<arrayButton.length; i++){
       }
       localStorage.setItem("cancion", JSON.stringify(newStorage))
       console.log(localStorage.getItem("cancion"));
+      window.location.replace("./playlist.html")
     }
   })
 }
