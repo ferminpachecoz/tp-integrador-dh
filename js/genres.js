@@ -6,7 +6,7 @@ fetch(url)
   })
   .then(function(data) {
     console.log(data);
-        let genresContainer = document.querySelector(".genredata")
+        let genresContainer = document.querySelector(".data")
         let html = ""
         let genre = data.data
     

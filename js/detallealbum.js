@@ -40,8 +40,10 @@
         <p class="artista">Nombre del Género al que pertenece: ${genresarray}</p>
         
         <p class="artista">Fecha de publicación del disco: ${data.release_date}</p>
+
+        <p class="listas">Lista de canciones: </p>
         
-        <ol class="lista">Lista de canciones:  ${tracksarray}</ol>
+        <ol class="lista">  ${tracksarray}</ol>
       `;
       
       albumContainer.innerHTML += '<div class="album-container">' + html + '</div>';
