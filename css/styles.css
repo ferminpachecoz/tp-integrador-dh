@@ -293,7 +293,7 @@ section .song-title{
 }
 
 /*genres*/
-section .genredata{
+section .data{
     display: flex;
   flex-wrap: wrap;
   justify-content: center;
