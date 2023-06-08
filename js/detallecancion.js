@@ -48,3 +48,36 @@ fetch(url)
   .catch(function(error) {
     console.log("Error: " + error);
   })
+/* Agregar cancion a mi playlist */
+let buttonAgregar = document.getElementById('btn-agregar')
+buttonAgregar.addEventListener('click', function(){
+  let storage = JSON.parse(localStorage.getItem('cancion'))
+  let obj = {
+    id: buttonAgregar.idCancion,
+    artist: buttonAgregar.artist,
+    title: buttonAgregar.title,
+    cover: buttonAgregar.cover
+  }
+  if (confirm("¿Estás seguro que quieres agregar esta canción a tu playlist?")) {
+    if(localStorage.getItem("cancion")){
+      let repetido = false
+      for(let i=0; i<storage.length;i++){
+        if(storage[i].id == obj.id){
+          repetido = true
+        }
+      }
+      if (!repetido){
+        storage.push(obj)
+        localStorage.setItem("cancion", JSON.stringify(storage))
+      }else{
+        alert("Esta canción ya se encuentra en tu playlist")
+      }
+    }else{
+      let favoritos = JSON.stringify([obj])
+      localStorage.setItem("cancion", favoritos)
+    }
+  } else {
+    
+  }
+  console.log(localStorage.getItem("cancion"));
+})
