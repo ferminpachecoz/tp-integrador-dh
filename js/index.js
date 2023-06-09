@@ -17,7 +17,7 @@ fetch(url)
           html = `
           <article class="card">
           <a href="./detalleartista.html?id=${artistas[i].id}">
-          <img src="${artistas[i].picture}" alt="">
+          <img src="${artistas[i].picture_xl}" alt="">
           <p class="title uk-text-truncate">${artistas[i].name}</p>
           </a>
           </article>
@@ -47,7 +47,7 @@ fetch(url)
           htmlalbum = `
         <article class="card">
           <a href="./detallealbum.html?id=${albumes[i].id}">
-          <img src="${albumes[i].cover}" alt="">
+          <img src="${albumes[i].cover_xl}" alt="">
           <p class="title uk-text-truncate">${albumes[i].title}</p>
           <p class="subtitle">${albumes[i].artist.name}</p>
           </a>
@@ -78,7 +78,7 @@ fetch(url)
             htmlcanciones = `
           <article class="card">
             <a href="./detallecancion.html?id=${canciones[i].id}">
-            <img src="${canciones[i].album.cover}" alt="">
+            <img src="${canciones[i].album.cover_xl}" alt="">
             <p class="title uk-text-truncate">${canciones[i].title}</p>  
             <p class="subtitle">${canciones[i].artist.name}</p>
             </a>
