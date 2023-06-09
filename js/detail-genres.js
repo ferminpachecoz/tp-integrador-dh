@@ -9,36 +9,49 @@ fetch(url)
 .then(function(data) {
     console.log(data);
 
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/0/artists`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`)
     .then(function(response){
       return response.json()
     })
     .then(function(info){
       console.log(info);
-        
-      let nombreartistas = document.querySelector(".datageneros")
-        let htmlart = ""
 
+      let generoContainer = document.querySelector(".datageneros")
+      let html = ""
+    
+      
+        html = `
+        <article class="datageneros">
+        <img src="${data.picture_xl}" alt="">
+        <p class="nombregenero">${data.name}</p>
+        </article>
+        `;
+        generoContainer.innerHTML += html
+        
+      let nombreartistas = document.querySelector(".articulos")
+        let htmlart = ""
+        let array = info.data
+        let generoshtml = ""
+
+        for(let i = 0; i<array.length; i++){
+            generoshtml += 
+            `
+            <article class="generosartistas">
+            <img src="${array[i].picture}" alt="">
+            <p>${array[i].name}</p>
+            </article>
+            
+            `;
+        }
         htmlart =
         `
-        <img src="${data.picture_xl}" alt="">
-        <p>${data.name}</p>
+        ${generoshtml}
         `;
         nombreartistas.innerHTML += htmlart
       
     })
 
   
-      let generoContainer = document.querySelector(".datageneros")
-      let html = ""
-    
-      
-        html = `
-        <img src="${data.picture_xl}" alt="">
-        <p class="nombregenero">${data.name}</p>
-       
-        `;
-        generoContainer.innerHTML += html
 
     })
 .catch(function(error) {
