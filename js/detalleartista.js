@@ -27,7 +27,7 @@
             `;
           }
           html = `
-          <img src="${data.picture}" alt="">
+          <img src="${data.picture_xl}" alt="">
           <p class="nombre-cantante">Nombre del cantante: ${data.name}</p>
           <p class="Top-5-albumns">Top 5 albums:</p>
           <ul>
