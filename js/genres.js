@@ -15,7 +15,7 @@ fetch(url)
             
             <article class="genero">
             <a class="a" href="./detail-genres.html?id=${genre[i].id}">
-            <img src="${genre[i].picture}" alt="">
+            <img src="${genre[i].picture_xl}" alt="">
             <p>${genre[i].name}</p>
             </a>
             </article>

@@ -310,6 +310,27 @@ section .genero{
 .genero p{
     color: white;
 }
+.genero img{
+    width: 120px;
+}
+.datageneros{
+    margin-top: 30px;
+    background-color: #3f3e3e;
+    margin: 32px;
+    padding: 20px;
+}
+.nombregenero{
+    margin-top: 18px;
+    font-size: 35px; 
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 0px;
+    font-weight: bold;
+}
+.datageneros img{
+    border-radius: 50%;
+    width: 300px;
+}
+
 /* Mi Playlist Styles */
 section .mi-playlist .container .card{
   width: 200px;

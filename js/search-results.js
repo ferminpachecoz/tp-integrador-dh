@@ -1,3 +1,4 @@
+//busqueda
 let formulario = document.querySelector(".form")
 let busqueda = document.querySelector(".busqueda")
 formulario.addEventListener("submit", function(event){
@@ -11,6 +12,7 @@ formulario.addEventListener("submit", function(event){
       }
 })
 
+//resultados de busqueda
 let query = new URLSearchParams(window.location.search).get("q")
 let mainTitle = document.querySelector(".search-resultados h1")
 mainTitle.innerText = `Resultados de búsqueda para: ${query}`;

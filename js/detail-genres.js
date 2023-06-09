@@ -9,13 +9,13 @@ fetch(url)
 .then(function(data) {
   console.log(data);
   
-      let generoContainer = document.querySelector(".data")
+      let generoContainer = document.querySelector(".datageneros")
       let html = ""
     
       
         html = `
-        <img src="${data.picture}" alt="">
-        <p>Nombre del cantante: ${data.name}</p>
+        <img src="${data.picture_xl}" alt="">
+        <p class="nombregenero">${data.name}</p>
        
         `;
         generoContainer.innerHTML += html
