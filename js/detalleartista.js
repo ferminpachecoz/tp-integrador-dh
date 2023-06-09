@@ -10,8 +10,8 @@
   })
   .then(function(data) {
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top`)
-        .then(function(res){
-          return res.json()
+        .then(function(response){
+          return response.json()
         })
         .then(function(info){
           console.log(info);
@@ -23,12 +23,13 @@
           let array = info.data;
           for(let i = 0; i<array.length; i++){
             htmlTracklist += `
-              <li>${array[i].title}</li>
+              <li class="list">${array[i].album.title}</li>
             `;
           }
           html = `
           <img src="${data.picture}" alt="">
           <p class="nombre-cantante">Nombre del cantante: ${data.name}</p>
+          <p class="Top-5-albumns">Top 5 albums:</p>
           <ul>
             ${htmlTracklist}
           </ul>
@@ -51,11 +52,3 @@
     console.log("Error: " + error);
   })
 
-//otro end point para las canciones 
-fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top`)
-  .then(function(res){
-    return res.json()
-  })
-  .then(function(info){
-    console.log(info);
-  })
