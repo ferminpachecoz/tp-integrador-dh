@@ -33,7 +33,7 @@
         
         html = `
         <img src="${data.cover_xl}" alt="">
-        <p class="disco">Nombre del Disco: ${data.title}</p>
+        <p class="disco">${data.title}</p>
         
         <p class="artista">Nombre del Artista: ${data.artist.name}</p>
         

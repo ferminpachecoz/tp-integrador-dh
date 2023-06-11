@@ -323,6 +323,12 @@ section .genero{
     margin-bottom: 25px;
     width: 140px;
 }
+
+.titulogenero{
+    margin: 20px;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
 .genero p{
     color: white;
 }
@@ -330,10 +336,8 @@ section .genero{
     width: 120px;
 }
 .datageneros{
-    margin-top: 30px;
-    background-color: #3f3e3e;
-    margin: 32px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .nombregenero{
     margin-top: 18px;
@@ -357,6 +361,7 @@ section .genero{
 .articulos{
     display: flex;
     flex-wrap: wrap;
+    background-color: #3f3e3e;
 }
 .generosartistas{
     width: 130px;

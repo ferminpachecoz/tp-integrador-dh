@@ -43,7 +43,7 @@ fetch(url)
             
             `;
         }
-        htmlart =
+    htmlart =
         `
         ${generoshtml}
         `;
