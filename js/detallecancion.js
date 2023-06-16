@@ -15,6 +15,8 @@ fetch(url)
     let explicito = document.getElementById('explicito');
     let imagen = document.getElementById('imagen-album');
     let mainTitle = document.querySelector('.song-title')
+    let audio = document.querySelector(".audio")
+    let escuchar = document.querySelector(".escuchar")
 
     let buttonAgregar = document.getElementById('btn-agregar')
     
@@ -25,6 +27,23 @@ fetch(url)
     explicito.innerText = data.explicit_lyrics?"Si":"No";
     imagen.src = data.album.cover_xl;
     mainTitle.innerText = data.title;
+    //audio
+    function reproducirAudio() {
+      audio.play();
+    }
+    escuchar.addEventListener("click", reproducirAudio)
+    function establecerCancion(src){
+    audio.src = src
+    } 
+    let enlaceCancionDesdeAPI = data.preview;
+    establecerCancion(enlaceCancionDesdeAPI);
+    //se detenga la reproduccion
+    escuchar.addEventListener('dblclick', detenerAudio);
+    function detenerAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+
     buttonAgregar.idCancion = data.id;
     buttonAgregar.title = data.title;
     buttonAgregar.artist = data.artist.name;
