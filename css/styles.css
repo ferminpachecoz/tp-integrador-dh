@@ -381,8 +381,13 @@ section .genero{
 }
 
 /* Mi Playlist Styles */
+.mi-playlist .container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 section .mi-playlist .container .card{
-  width: 200px;
+  width: 180px;
   margin-bottom: 30px;
 }
 section .mi-playlist .container .card .btn-borrar{
@@ -533,4 +538,24 @@ section .section-wrapper .container{
 section .mi-playlist .container .card{
   width: 170px;
 }
+/*generos*/
+.titulogenero{
+  font-size: 30px;
+}
+section .genero{
+  margin-right: 32px;
+  margin-bottom: 32px;
+}
+
+.datageneros img{
+  width: 150px;
+  height: 150px;
+}
+.nombregenero{
+  font-size: 30px;
+}
+.generosartistas{
+    width: 140px;
+}
 } 
+
