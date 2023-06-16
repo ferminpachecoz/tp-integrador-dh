@@ -23,7 +23,9 @@
           let array = info.data;
           for(let i = 0; i<array.length; i++){
             htmlTracklist += `
-              <li class="list">${array[i].album.title}</li>
+              <li class="list">
+              ${array[i].album.title}
+              </li>
             `;
           }
           html = `

@@ -36,11 +36,12 @@ fetch(url)
         for(let i = 0; i<array.length; i++){
             generoshtml += 
             `
+            <a class="generolink" href="./detalleartista.html?id=${array[i].id}">
             <article class="generosartistas">
             <img src="${array[i].picture}" alt="">
             <p>${array[i].name}</p>
             </article>
-            
+            </a>
             `;
         }
     htmlart =

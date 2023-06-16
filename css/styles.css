@@ -362,10 +362,18 @@ section .genero{
     display: flex;
     flex-wrap: wrap;
     background-color: #3f3e3e;
+    justify-content: center;
 }
 .generosartistas{
     width: 130px;
     margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.generolink{
+  color: white;
+  text-decoration: none;
 }
 .generosartistas img{
     width: 120px;

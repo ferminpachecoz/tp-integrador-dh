@@ -27,7 +27,9 @@
         let tracksarray = "";
     
         for (let i = 0; i < tracks.length; i++) {
-            tracksarray += `<li class="list"> ${tracks[i].title}</li>`
+            tracksarray += `<li class="list"> 
+            <a class="generolink" href="./detallecancion.html?id=${tracks[i].id}">${tracks[i].title}</a>
+            </li>`
 
         }
         
@@ -43,7 +45,7 @@
 
         <p class="listas">Lista de canciones: </p>
         
-        <ol class="lista">  ${tracksarray}</ol>
+        <ol class="lista">${tracksarray}</ol>
       `;
       
       albumContainer.innerHTML += '<div class="album-container">' + html + '</div>';
